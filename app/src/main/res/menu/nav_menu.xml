@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:ignore="ExtraText">
+    <item
+        android:id="@+id/importantObs"
+        android:title="Important"/>
+    <item
+        android:id="@+id/futureObs"
+        android:title="Future"/>
+    <item
+        android:id="@+id/pastObs"
+        android:title="Past"/>
+</menu>
