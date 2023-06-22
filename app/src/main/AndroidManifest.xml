@@ -18,6 +18,15 @@
         android:theme="@style/Theme.StarShow"
         tools:targetApi="31">
 
+
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>    
+        </activity>
         <service
             android:name="com.example.starshow.LocationService"
             android:foregroundServiceType="location" >
@@ -29,12 +38,6 @@
             android:label="@string/title_activity_scrolling"
             android:theme="@style/Theme.StarShow.NoActionBar" >
 
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-
         </activity>
         <activity
             android:name=".LoginActivity"
@@ -42,6 +45,11 @@
             android:label="@string/title_activity_login"
             android:theme="@style/Theme.StarShow.NoActionBar">
 
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="StarShow" >
         </activity>
     </application>
 
