@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "81342021811",
+    "project_id": "starshow-390212",
+    "storage_bucket": "starshow-390212.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:81342021811:android:be84c8727cfdd90f7470c6",
+        "android_client_info": {
+          "package_name": "com.example.starshow"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "81342021811-if9m2f1b2jjkkemug5ialk2lmoic2017.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.starshow",
+            "certificate_hash": "10035f7dbf1119c9d138ec0e0fc11776e71841d6"
+          }
+        },
+        {
+          "client_id": "81342021811-ojo0hfjf333n0dvl3cntb1qc7finbrcv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxtUlHnmCDdj7_zVbtXNySJnnb2uvXOVo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "81342021811-ojo0hfjf333n0dvl3cntb1qc7finbrcv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
