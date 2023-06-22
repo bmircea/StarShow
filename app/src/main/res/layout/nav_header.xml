@@ -7,10 +7,11 @@
     android:background="@color/black">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/imageViewUser"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
+        android:onClick="pickedPhoto"
         android:contentDescription="@string/nav_header_desc"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -41,5 +42,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.877" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
