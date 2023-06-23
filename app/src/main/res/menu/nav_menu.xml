@@ -4,11 +4,14 @@
     tools:ignore="ExtraText">
     <item
         android:id="@+id/importantObs"
-        android:title="Important"/>
+        android:title="Observations" />
     <item
         android:id="@+id/futureObs"
         android:title="Future"/>
     <item
         android:id="@+id/pastObs"
         android:title="Past"/>
+
+    <item android:id="@+id/logout"
+        android:title="Logout"/>
 </menu>

@@ -1,5 +1,6 @@
 package com.example.starshow
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -52,6 +53,11 @@ class ObservationListActivity : AppCompatActivity() {
 
     }
 
+    override fun onBackPressed() {
+        startActivity(Intent(this@ObservationListActivity, MainActivity::class.java))
+        finish()
+    }
+
     private fun filterList(query: String?)
     {
         if (query != null)
@@ -80,7 +86,7 @@ class ObservationListActivity : AppCompatActivity() {
         val db = Room.databaseBuilder(
             applicationContext,
             AppDatabase::class.java, "Observation"
-        ).build()
+        ).allowMainThreadQueries().build()
 
         val obsDao = db.observationDao()
         val obs = obsDao.getAllObservations()

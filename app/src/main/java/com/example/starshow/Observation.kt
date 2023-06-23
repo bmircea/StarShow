@@ -7,12 +7,10 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 
-@Entity
+@Entity(tableName = "observation")
 data class Observation(
     @PrimaryKey val ID: Int,
     val name: String,
-    val obsText: String,
-    val image: Bitmap?,
-    val location: Location?) {
+    val obsText: String) {
 
 }

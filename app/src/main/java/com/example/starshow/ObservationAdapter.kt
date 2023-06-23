@@ -30,7 +30,7 @@ class ObservationAdapter(var mList: List<Observation>) : RecyclerView.Adapter<Ob
     }
 
     override fun onBindViewHolder(holder: ObservationViewHolder, position: Int) {
-        holder.image.setImageBitmap(mList[position].image)
+        //holder.image.setImageBitmap(mList[position].image)
         holder.title.text = mList[position].name
     }
 }
