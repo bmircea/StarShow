@@ -53,6 +53,9 @@ class LoginActivity : AppCompatActivity() {
         signing = findViewById(R.id.sign_in_button)
         login = findViewById(R.id.login)
 
+        user = findViewById(R.id.username)
+        pass = findViewById(R.id.password)
+
         signing.setOnClickListener{ view: View? ->
             Toast.makeText(this, "Logging in", Toast.LENGTH_SHORT).show()
             signInToGoogle()
@@ -69,6 +72,8 @@ class LoginActivity : AppCompatActivity() {
     {
         try {
             firebaseAuth.createUserWithEmailAndPassword(user.text.toString(), pass.text.toString())
+            SavedPreference.setEmail(this, user.text.toString())
+            SavedPreference.setPass(this, pass.text.toString())
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
             finish()
@@ -134,7 +139,7 @@ class LoginActivity : AppCompatActivity() {
 
     override fun onStart(){
         super.onStart()
-        if(GoogleSignIn.getLastSignedInAccount(this)!=null){
+        /*if(GoogleSignIn.getLastSignedInAccount(this)!=null){
             startActivity(Intent(this, MainActivity::class.java))
             finish()
         } else {
@@ -143,7 +148,7 @@ class LoginActivity : AppCompatActivity() {
                 startActivity(Intent(this, MainActivity::class.java))
                 Toast.makeText(this, "welcome back", Toast.LENGTH_SHORT).show()
             }
-        }
+        }*/
     }
 
 }

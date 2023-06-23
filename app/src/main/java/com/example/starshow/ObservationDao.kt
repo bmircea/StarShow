@@ -13,7 +13,7 @@ interface ObservationDao {
     @Update
     fun update(observation: Observation)
 
-    @Query("SELECT * FROM Observation")
+    @Query("SELECT * FROM observation")
     fun getAllObservations(): List<Observation>
 
 

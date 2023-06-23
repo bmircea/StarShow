@@ -103,17 +103,14 @@ class MainActivity : AppCompatActivity() {
                     }
                     R.id.logout->{
 
-                        auth.signOut()
 
 
-                        if (pass == "")
-                        {
-                            googleSignInClient.signOut().addOnCompleteListener {
-                                Toast.makeText(this@MainActivity,"Logging Out",Toast.LENGTH_SHORT).show()
-                                startActivity(Intent(this@MainActivity, LoginActivity::class.java))
-                                finish()
-                            }
+                        googleSignInClient.signOut().addOnCompleteListener {
+                            Toast.makeText(this@MainActivity,"Logging Out",Toast.LENGTH_SHORT).show()
+                            startActivity(Intent(this@MainActivity, LoginActivity::class.java))
+                            finish()
                         }
+
 
 
                     }

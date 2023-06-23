@@ -83,11 +83,7 @@ class ObservationListActivity : AppCompatActivity() {
     }
 
     private fun addData() {
-        val db = Room.databaseBuilder(
-            applicationContext,
-            AppDatabase::class.java, "Observation"
-        ).allowMainThreadQueries().build()
-
+        val db = AppDatabase.getInstance(this)
         val obsDao = db.observationDao()
         val obs = obsDao.getAllObservations()
 

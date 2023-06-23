@@ -17,8 +17,9 @@ abstract class AppDatabase : RoomDatabase() {
         fun getInstance(ctx: Context): AppDatabase {
             if(instance == null)
                 instance = Room.databaseBuilder(ctx.applicationContext, AppDatabase::class.java,
-                    "note_database")
+                    "obs_database")
                     .fallbackToDestructiveMigration()
+                    .allowMainThreadQueries()
                     .addCallback(roomCallback)
                     .build()
 
@@ -36,8 +37,8 @@ abstract class AppDatabase : RoomDatabase() {
         private fun populateDatabase(db: AppDatabase) {
             val obsDao = db.observationDao()
             obsDao.insert(Observation(1, "Example 1", "This is an example!"))
-            //noteDao.insert(Observation("title 2", "desc 2", 2))
-            //noteDao.insert(Observation("title 3", "desc 3", 3))
+            obsDao.insert(Observation(1, "Example 2", "desc 2"))
+            obsDao.insert(Observation(3, "Example 3", "desc 3"))
 
         }
     }
